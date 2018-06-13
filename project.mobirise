@@ -1,0 +1,153 @@
+{
+  "settings": {
+    "name": "Site-06-13_1631",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "architectamp",
+      "title": "ArchitectAMP",
+      "styling": {
+        "primaryColor": "#009B95",
+        "secondaryColor": "#00C322",
+        "successColor": "#DCF900",
+        "infoColor": "#005E5A",
+        "warningColor": "#FFB800",
+        "dangerColor": "#FF4900",
+        "mainFont": "Didact Gothic",
+        "display1Font": "Didact Gothic",
+        "display1Size": 6,
+        "display2Font": "Didact Gothic",
+        "display2Size": 4.2,
+        "display5Font": "Didact Gothic",
+        "display5Size": 2,
+        "display6Font": "Didact Gothic",
+        "display6Size": 1.2,
+        "display7Font": "Didact Gothic",
+        "display7Size": 1,
+        "display4Font": "Didact Gothic",
+        "display4Size": 0.8,
+        "isRoundedButtons": false,
+        "figureShadow": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [],
+    "versionFirst": "4.7.5",
+    "uniqCompNum": 3,
+    "versionPublish": "4.7.5",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgcolor",
+            ".mbr-row, .main-container, .off-container": {
+              "padding": "0",
+              "margin": "0"
+            },
+            ".mbr-row": {
+              "justify-content": "space-between",
+              "position": "relative",
+              "& when (@reverseContent)": {
+                "flex-direction": "row-reverse"
+              },
+              ".image": {
+                "display": "flex",
+                "border": "(@borderSize * 1px) solid @borderColor"
+              },
+              ".main-container": {
+                ".image": {
+                  "height": "(@imgHeight * 1px)",
+                  "width": "100%",
+                  "@media (max-width: 992px)": {
+                    "height": "100%",
+                    "width": "100%"
+                  }
+                }
+              },
+              ".off-container": {
+                "display": "flex",
+                "flex-wrap": "wrap",
+                ".image": {
+                  "height": "(@imgHeight * 0.5px)",
+                  "width": "50%",
+                  "@media (max-width: 992px)": {
+                    "height": "100%",
+                    "width": "100%"
+                  }
+                }
+              }
+            },
+            "@media (max-width: 992px)": {
+              ".mbr-row": {
+                "flex-direction": "column"
+              },
+              "amp-img": {
+                "width": "100%!important"
+              }
+            },
+            "amp-img": {
+              "position": "relative",
+              "height": "100%",
+              "width": "100%",
+              "&:hover": {
+                "&:before": {
+                  "opacity": "@hoverOpacity",
+                  "-ms-filter": "\"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB)\"",
+                  "background": "linear-gradient(45deg, @hg1color, @hg2color)"
+                }
+              }
+            },
+            "a": {
+              "position": "absolute",
+              "width": "16px",
+              "height": "16px",
+              "right": "48px",
+              "top": "32px",
+              ".close": {
+                "position": "relative",
+                "width": "32px",
+                "height": "32px"
+              },
+              ".close:before, .close:after": {
+                "position": "absolute",
+                "left": "15px",
+                "content": "' '",
+                "height": "33px",
+                "width": "2px",
+                "background-color": "#fff"
+              },
+              ".close:before": {
+                "transform": "rotate(45deg)"
+              },
+              ".close:after": {
+                "transform": "rotate(-45deg)"
+              }
+            }
+          },
+          "_name": "gallery1",
+          "_customHTML": "<section class=\"gallery1 gallery features mbr-section\" group=\"Gallery\" plugins=\"amp-main, amp-image-lightbox\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n\t<input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n\t<header>Image Params</header>\n\t<input type=\"range\" inline=\"\" title=\"Image Height\" name=\"imgHeight\" min=\"300\" max=\"1200\" step=\"50\" value=\"900\">\n\t<input type=\"checkbox\" title=\"Image Left/Right\" name=\"reverseContent\">\n\t<header>Hover Params</header>\n\t<input type=\"color\" title=\"Hover Gradient Color 1\" name=\"hg1color\" value=\"#000000\">\n\t<input type=\"color\" title=\"Hover Gradient Color 2\" name=\"hg2color\" value=\"#000000\">\n\t<input type=\"range\" inline=\"\" title=\"Hover Opacity\" name=\"hoverOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\">\n\t<input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#ffffff\">\n\t<input type=\"range\" inline=\"\" title=\"Border Size\" name=\"borderSize\" min=\"0\" max=\"20\" step=\"1\" value=\"2\">\n\t<input type=\"color\" title=\"Background Color\" name=\"bgcolor\" value=\"#ffffff\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<div class=\"mbr-row\">\n\t\t<div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 main-container\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img class=\"image-without-link\" on=\"tap:lightbox1\" role=\"button\" tabindex=\"0\" src=\"@PROJECT_PATH@/assets/images/img1.jpg\" layout=\"responsive\" height=\"897\" width=\"1345.5\" alt=\"Mobirise\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img1.jpg\" alt=\"Mobirise\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 off-container\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img class=\"image-without-link\" on=\"tap:lightbox2\" role=\"button\" mbr-class=\"{'super-hide': imagesAmount < 2}\" tabindex=\"0\" src=\"@PROJECT_PATH@/assets/images/img2.jpg\" layout=\"responsive\" height=\"447\" width=\"678.1289506953224\" alt=\"Mobirise\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img2.jpg\" alt=\"Mobirise\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img class=\"image-without-link\" on=\"tap:lightbox2\" role=\"button\" mbr-class=\"{'super-hide': imagesAmount < 2}\" tabindex=\"0\" src=\"@PROJECT_PATH@/assets/images/img3.jpg\" layout=\"responsive\" height=\"447\" width=\"794.6666666666666\" alt=\"Mobirise\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img3.jpg\" alt=\"Mobirise\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img class=\"image-without-link\" on=\"tap:lightbox2\" role=\"button\" mbr-class=\"{'super-hide': imagesAmount < 2}\" tabindex=\"0\" src=\"@PROJECT_PATH@/assets/images/img4.jpg\" layout=\"responsive\" height=\"447\" width=\"670.5\" alt=\"Mobirise\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img4.jpg\" alt=\"Mobirise\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img class=\"image-without-link\" on=\"tap:lightbox2\" role=\"button\" mbr-class=\"{'super-hide': imagesAmount < 2}\" tabindex=\"0\" src=\"@PROJECT_PATH@/assets/images/img5.jpg\" layout=\"responsive\" height=\"447\" width=\"670.5\" alt=\"Mobirise\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img5.jpg\" alt=\"Mobirise\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n<amp-image-lightbox id=\"lightbox1\" layout=\"nodisplay\">\n\t<a data-close-button-aria-label=\"Close\">\n\t\t<span class=\"close\"></span>\n\t</a>\n</amp-image-lightbox>\n<amp-image-lightbox id=\"lightbox2\" layout=\"nodisplay\" mbr-class=\"{'super-hide': imagesAmount < 2}\">\n\t<a data-close-button-aria-label=\"Close\">\n\t\t<span class=\"close\"></span>\n\t</a>\n</amp-image-lightbox>\n<amp-image-lightbox id=\"lightbox3\" layout=\"nodisplay\" mbr-class=\"{'super-hide': imagesAmount < 3}\">\n\t<a data-close-button-aria-label=\"Close\">\n\t\t<span class=\"close\"></span>\n\t</a>\n</amp-image-lightbox>\n<amp-image-lightbox id=\"lightbox4\" layout=\"nodisplay\" mbr-class=\"{'super-hide': imagesAmount < 4}\">\n\t<a data-close-button-aria-label=\"Close\">\n\t\t<span class=\"close\"></span>\n\t</a>\n</amp-image-lightbox>\n<amp-image-lightbox id=\"lightbox5\" layout=\"nodisplay\" mbr-class=\"{'super-hide': imagesAmount < 5}\">\n\t<a data-close-button-aria-label=\"Close\">\n\t\t<span class=\"close\"></span></a>\n\t</amp-image-lightbox>\n</section>",
+          "_cid": "qURqPwzraM",
+          "_anchor": "gallery1-2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        }
+      ]
+    }
+  }
+}
